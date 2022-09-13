@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -35,6 +36,7 @@ public class PasswordMain extends BorderPane
 	private Button checkPwdButton, exitButton, checkPwdsInFileButton;
 	DecimalFormat format = new DecimalFormat("#0.000");
 	private Alert alert = new Alert(AlertType.INFORMATION);
+	private Alert errorAlert = new Alert(AlertType.ERROR);
 	PasswordCheckerUtility pwdChecker;
 	
 	public PasswordMain()
@@ -139,14 +141,16 @@ public class PasswordMain extends BorderPane
 			
 			if (PasswordCheckerUtility.isValidPassword(passwordString)) {
 				if (PasswordCheckerUtility.isWeakPassword(passwordString)) {
-					alert.setTitle("Password Status");
-					alert.setHeaderText(null);
-					alert.setGraphic(null);
-					alert.setContentText("Password is OK but weak");
-					alert.showAndWait();
+					errorAlert.setTitle("Password Status");
+					errorAlert.setHeaderText(null);
+					errorAlert.setGraphic(null);
+					errorAlert.setContentText("Password is OK but weak");
+					errorAlert.showAndWait();
+					
 				}
 				else {
 					alert.setContentText("Password is valid");
+					alert.setTitle("Password Status");
 					alert.showAndWait();
 				}	
 			} else {
@@ -160,11 +164,11 @@ public class PasswordMain extends BorderPane
 			alert.showAndWait();
 		}
 		catch (Exception ex)		{
-			alert.setTitle("Password Error");
-			alert.setHeaderText(null);
-			alert.setGraphic(null);
-			alert.setContentText(ex.getMessage());
-			alert.showAndWait();
+			errorAlert.setTitle("Password Error");
+			errorAlert.setContentText(ex.getMessage());
+			errorAlert.setHeaderText(null);
+			errorAlert.setGraphic(null);
+			errorAlert.showAndWait();
 		}			
 	}
 
