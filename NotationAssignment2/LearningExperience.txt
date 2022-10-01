@@ -1,0 +1,2 @@
+This assignment took a while because I was very confused at the start. In the beginning, I used array for DS implementation, but later switched to linked list so I could get some practice. 
+I now have a better understanding of queue,stack,linked list,javadoc, exception handling, JUnit tests, resolving bugs, etc. I'm not sure if I would do anything differently in my next project.
