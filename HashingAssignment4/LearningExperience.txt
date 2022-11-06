@@ -1,0 +1,7 @@
+In this assignment I learned a few things:
+1) Implementation of an array of linkedlists
+2) calculation implementation of hash table size and required index
+3) How to read input of a text file
+4) implementation of separate chaining
+I would not do anything different next time. The project was quite confusing and a pain to deal with because there was no javadoc provided. 
+However, I was able to figure out what to do with the help of class notes and some extra effort. Looking forward to the next assignment. 
