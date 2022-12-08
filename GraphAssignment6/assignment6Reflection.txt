@@ -1,0 +1,4 @@
+I decided to work on this assignment early, and I'm glad I did because this assignment took much longer than expected. 
+A couple of things I learned : Graph implementation, dijkstra's algorithm + implementation
+A list of things I reinforced my knowledge on: Map & set implementation via hashmap/hashset, comparable, priorityqueue, generics, junit testing, iterator, etc.
+Glad the assignment is completed!
