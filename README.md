@@ -1,1 +1,1 @@
-# cmsc204
+# CMSC204 / Object-oriented programming II
